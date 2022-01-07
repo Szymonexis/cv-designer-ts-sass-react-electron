@@ -1,0 +1,16 @@
+@import "./../utilities/master.scss";
+
+$danger-color: #ff5500;
+
+.button {
+    padding: 1rem;
+    background-color: $secondary-color;
+    color: $text-color;
+    border: 0.2rem solid $secondary-color-dark;
+    border-radius: 0.5rem;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: $secondary-color-dark;
+}
