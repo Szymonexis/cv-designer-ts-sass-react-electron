@@ -8,9 +8,14 @@ import installExtension, {
 let win: BrowserWindow | null = null;
 
 function createWindow() {
+	const { fork } = require('child_process')
+	const ps = fork(`${__dirname}/server.js`)
+
 	win = new BrowserWindow({
 		width: 900,
 		height: 600,
+		minHeight: 600,
+		minWidth: 900,
 		webPreferences: {
 			nodeIntegration: true,
 		},
