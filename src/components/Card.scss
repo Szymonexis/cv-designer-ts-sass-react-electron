@@ -1,0 +1,13 @@
+@import "../utilities/master.scss";
+
+@mixin cardTemplate {
+    text-align: center;
+    border-radius: 1rem;
+    background-color: $add-color-four;
+    padding: 1rem;
+    height: calc(100vh - 4rem);
+}
+
+.card {
+    @include cardTemplate();
+}

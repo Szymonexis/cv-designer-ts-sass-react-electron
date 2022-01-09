@@ -1,0 +1,10 @@
+@import "../utilities/master.scss";
+
+@mixin screenTemplate() {
+    background-color: $main-color;
+    padding: 1rem;
+}
+
+.screen {
+    @include screenTemplate;
+}

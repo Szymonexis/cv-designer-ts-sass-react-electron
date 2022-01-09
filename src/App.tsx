@@ -1,13 +1,24 @@
+import { HashRouter as Router, Route } from "react-router-dom";
+import { Switch, Redirect } from "react-router";
+
+import WelcomeScreen from "./components/Screens/00WelcomeScreen";
+import BasicDataScreen from "./components/Screens/01BasicDataScreenOne";
+
 import "./App.scss";
-import "./components/Button";
-import Button from "./components/Button";
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Hello :3</h1>
-			<Button>Press me!</Button>
-		</div>
+		<Router>
+			<Switch>
+				<Route exact path={"/"}>
+					<WelcomeScreen />
+				</Route>
+				<Route exact path={"/basicDataOne"}>
+					<BasicDataScreen />
+				</Route>
+				<Redirect to={"/"} />
+			</Switch>
+		</Router>
 	);
 }
 

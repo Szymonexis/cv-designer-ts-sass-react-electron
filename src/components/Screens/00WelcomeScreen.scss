@@ -1,0 +1,18 @@
+@import "../../utilities/master.scss";
+@import "../../components/Screen.scss";
+@import "../../components/Card.scss";
+
+.screen-welcome {
+	@include screenTemplate();
+}
+
+.card-welcome {
+	@include cardTemplate();
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-welcome {
+    
+}

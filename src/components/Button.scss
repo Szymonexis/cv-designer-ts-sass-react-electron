@@ -1,16 +1,47 @@
 @import "./../utilities/master.scss";
 
-$danger-color: #ff5500;
+$danger-color: rgb(255, 0, 0);
+$danger-color-dark: rgb(210, 0, 0);
 
-.button {
-    padding: 1rem;
-    background-color: $secondary-color;
-    color: $text-color;
-    border: 0.2rem solid $secondary-color-dark;
-    border-radius: 0.5rem;
-    transition-duration: 0.4s;
+@mixin buttonTemplate(
+	$primary: $secondary-color,
+	$secondary: $secondary-color-dark
+) {
+	font-weight: 800;
+	min-width: 7rem;
+	padding: 0.8rem;
+	background-color: $primary;
+	color: $text-color;
+	border: 0.2rem solid $secondary;
+	border-radius: 0.75rem;
+	transition-duration: 0.4s;
+	:hover {
+		background-color: $secondary;
+	}
 }
 
-.button:hover {
-    background-color: $secondary-color-dark;
+.button-div {
+	margin: 1rem;
+}
+
+a.button {
+	@include buttonTemplate;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.button {
+	@include buttonTemplate;
+}
+
+a.button-danger {
+	@include buttonTemplate($danger-color, $danger-color-dark);
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.button-danger {
+	@include buttonTemplate($danger-color, $danger-color-dark);
 }
