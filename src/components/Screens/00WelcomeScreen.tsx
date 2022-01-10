@@ -23,9 +23,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = (props) => {
 						width="250"
 					/>
 					<br />
-					<Button to={"/basicDataOne"}>
-                        Start
-                    </Button>
+					<Button to={"/basicDataOne"}>Start</Button>
 				</div>
 			</Card>
 		</Screen>

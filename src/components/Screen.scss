@@ -3,6 +3,7 @@
 @mixin screenTemplate() {
     background-color: $main-two;
     padding: 1rem;
+    height: calc(100vh - 2rem - $win-height);
 }
 
 .screen {

@@ -1,8 +1,25 @@
 @import "./../utilities/master.scss";
 
 @mixin buttonTemplate(
-	$primary: $add-two,
-	$secondary: $add-one
+	$primary: $button-two,
+	$secondary: $button-one
+) {
+	font-weight: 800;
+	min-width: 7rem;
+	padding: 0.8rem;
+	background-color: $primary;
+	color: $text;
+	border: 0.2rem solid $secondary;
+	border-radius: 0.75rem;
+	transition-duration: 0.4s;
+	:hover {
+		background-color: $secondary;
+	}
+}
+
+@mixin buttonTemplateDark(
+	$primary: $button-two-dark,
+	$secondary: $button-one-dark
 ) {
 	font-weight: 800;
 	min-width: 7rem;
@@ -46,23 +63,23 @@ a.button-danger {
 
 // dark theme
 a.button-dark {
-	@include buttonTemplate($button-two-dark, $button-one-dark);
+	@include buttonTemplateDark;
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-dark {
-	@include buttonTemplate($button-two-dark, $button-one-dark);
+	@include buttonTemplateDark;
 }
 
 a.button-danger-dark {
-	@include buttonTemplate($button-danger-two-dark, $button-danger-one-dark);
+	@include buttonTemplateDark($button-danger-two-dark, $button-danger-one-dark);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-danger-dark {
-	@include buttonTemplate($button-danger-two-dark, $button-danger-one-dark);
+	@include buttonTemplateDark($button-danger-two-dark, $button-danger-one-dark);
 }

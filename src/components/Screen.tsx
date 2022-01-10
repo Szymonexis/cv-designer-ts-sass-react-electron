@@ -1,5 +1,6 @@
 import React from "react";
 
+import Header from "./Header";
 import "./Screen.scss";
 
 export interface ScreenProps {
@@ -9,15 +10,18 @@ export interface ScreenProps {
 
 const Screen: React.FC<ScreenProps> = (props) => {
 	return (
-		<div
-			className={
-				props.className !== undefined
-					? "screen-" + props.className
-					: "screen"
-			}
-		>
-			{props.children}
-		</div>
+		<React.Fragment>
+			<Header />
+			<div
+				className={
+					props.className !== undefined
+						? "screen-" + props.className
+						: "screen"
+				}
+			>
+				{props.children}
+			</div>
+		</React.Fragment>
 	);
 };
 

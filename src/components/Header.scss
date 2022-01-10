@@ -1,2 +1,25 @@
 @import "../utilities/master.scss";
 
+@mixin headerTemplate(
+    $colorOne: #000000, $height: $win-height
+) {
+    height: $height;
+    width: 100vw;
+    background: $colorOne;
+    display: flex;
+    color: $text;
+    font-weight: 400;
+    font-size: small;
+    align-items: center;
+    -webkit-app-region: drag;
+    img {
+        width: $height;
+    }
+    span {
+        margin-left: 0.6rem;
+    }
+}
+
+.header {
+    @include headerTemplate;
+}

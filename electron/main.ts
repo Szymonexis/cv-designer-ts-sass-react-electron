@@ -14,12 +14,17 @@ function createWindow() {
 	win = new BrowserWindow({
 		width: 900,
 		height: 600,
-		minHeight: 600,
 		minWidth: 900,
+		minHeight: 600,
 		webPreferences: {
 			nodeIntegration: true,
 		},
-		frame: true,
+		frame: false,
+		titleBarStyle: 'hidden',
+		titleBarOverlay: {
+			color: '#000000',
+			symbolColor: '#023e8a'
+		},
 		icon: __dirname + "/src/resources/logo/logo-transparent.png"
 	});
 
