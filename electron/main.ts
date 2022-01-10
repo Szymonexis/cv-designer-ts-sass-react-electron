@@ -20,7 +20,7 @@ function createWindow() {
 			nodeIntegration: true,
 		},
 		frame: true,
-		icon: __dirname + "/src/resources/logo/logo.png"
+		icon: __dirname + "/src/resources/logo/logo-transparent.png"
 	});
 
 	if (isDev) {

@@ -23,46 +23,46 @@
 
 // light theme
 a.button {
-	@include buttonTemplate($add-two, $add-one);
+	@include buttonTemplate($button-two, $button-one);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button {
-	@include buttonTemplate($add-two, $add-one);
+	@include buttonTemplate($button-two, $button-one);
 }
 
 a.button-danger {
-	@include buttonTemplate($danger-two, $danger-one);
+	@include buttonTemplate($button-danger-two, $button-danger-one);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-danger {
-	@include buttonTemplate($danger-two, $danger-one);
+	@include buttonTemplate($button-danger-two, $button-danger-one);
 }
 
 // dark theme
 a.button-dark {
-	@include buttonTemplate($add-two-dark, $add-one-dark);
+	@include buttonTemplate($button-two-dark, $button-one-dark);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-dark {
-	@include buttonTemplate($add-two-dark, $add-one-dark);
+	@include buttonTemplate($button-two-dark, $button-one-dark);
 }
 
 a.button-danger-dark {
-	@include buttonTemplate($danger-two-dark, $danger-one-dark);
+	@include buttonTemplate($button-danger-two-dark, $button-danger-one-dark);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-danger-dark {
-	@include buttonTemplate($danger-two-dark, $danger-one-dark);
+	@include buttonTemplate($button-danger-two-dark, $button-danger-one-dark);
 }

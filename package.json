@@ -40,12 +40,13 @@
 			"buildResources": "assets"
 		},
 		"mac": {
-			"icon": "./public/resources/logo/logo.png",
+			"icon": "./public/resources/logo/logo-transparent.png",
 			"category": "public.app-category.utilities"
 		  },
 		  "win": {
-			"icon": "./public/resources/logo/logo.png"
-		  }
+			"icon": "./public/resources/logo/logo-transparent.png"
+		  },
+		  "name": "CV-Designer"
 	},
 	"scripts": {
 		"postinstall": "electron-builder install-app-deps",
