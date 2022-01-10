@@ -38,7 +38,14 @@
 		],
 		"directories": {
 			"buildResources": "assets"
-		}
+		},
+		"mac": {
+			"icon": "./public/resources/logo/logo.png",
+			"category": "public.app-category.utilities"
+		  },
+		  "win": {
+			"icon": "./public/resources/logo/logo.png"
+		  }
 	},
 	"scripts": {
 		"postinstall": "electron-builder install-app-deps",

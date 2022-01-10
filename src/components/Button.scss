@@ -1,17 +1,14 @@
 @import "./../utilities/master.scss";
 
-$danger-color: rgb(255, 0, 0);
-$danger-color-dark: rgb(210, 0, 0);
-
 @mixin buttonTemplate(
-	$primary: $secondary-color,
-	$secondary: $secondary-color-dark
+	$primary: $add-two,
+	$secondary: $add-one
 ) {
 	font-weight: 800;
 	min-width: 7rem;
 	padding: 0.8rem;
 	background-color: $primary;
-	color: $text-color;
+	color: $text;
 	border: 0.2rem solid $secondary;
 	border-radius: 0.75rem;
 	transition-duration: 0.4s;
@@ -24,24 +21,48 @@ $danger-color-dark: rgb(210, 0, 0);
 	margin: 1rem;
 }
 
+// light theme
 a.button {
-	@include buttonTemplate;
+	@include buttonTemplate($add-two, $add-one);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button {
-	@include buttonTemplate;
+	@include buttonTemplate($add-two, $add-one);
 }
 
 a.button-danger {
-	@include buttonTemplate($danger-color, $danger-color-dark);
+	@include buttonTemplate($danger-two, $danger-one);
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
 .button-danger {
-	@include buttonTemplate($danger-color, $danger-color-dark);
+	@include buttonTemplate($danger-two, $danger-one);
+}
+
+// dark theme
+a.button-dark {
+	@include buttonTemplate($add-two-dark, $add-one-dark);
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.button-dark {
+	@include buttonTemplate($add-two-dark, $add-one-dark);
+}
+
+a.button-danger-dark {
+	@include buttonTemplate($danger-two-dark, $danger-one-dark);
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.button-danger-dark {
+	@include buttonTemplate($danger-two-dark, $danger-one-dark);
 }
