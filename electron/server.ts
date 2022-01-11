@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.json());
+// const routes = require("./routes");
 
-// app.use('/uploads/images', express.static(path.join('uploads', 'images')))
+app.use(bodyParser.json());
 
 app.use((req: any, res: any, next: any) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +20,10 @@ app.use((req: any, res: any, next: any) => {
 
     next();
 });
+
+// app.use('/api/podcasts', podcastsRoutes);
+// app.use('/api/users', usersRoutes);
+// app.use('/', routes);
 
 app.use((error: any, req: any, res: any, next: any) => {
     if (req.file) {
