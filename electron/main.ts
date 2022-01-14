@@ -9,7 +9,7 @@ let win: BrowserWindow | null = null;
 
 function createWindow() {
 	const { fork } = require('child_process')
-	const ps = fork(`${__dirname}/server.js`)
+	fork(`${__dirname}/server.js`)
 
 	win = new BrowserWindow({
 		width: 900,

@@ -1,19 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-import Screen from "../Screen";
+import Screen, { ScreenProps } from "../Screen";
 import Card from "../Card";
 import Button from "../Button";
 
 import "./00WelcomeScreen.scss";
 
-interface WelcomeScreenProps {}
-
-const WelcomeScreen: React.FC<WelcomeScreenProps> = (props) => {
+const WelcomeScreen: React.FC<ScreenProps> = (props) => {
 	const className = "welcome";
 
 	return (
-		<Screen className={className}>
+		<Screen className={className} platform={props.platform}>
 			<Card className={className}>
 				<div>
 					<img

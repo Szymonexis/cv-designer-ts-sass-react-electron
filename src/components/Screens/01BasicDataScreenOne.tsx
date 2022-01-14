@@ -7,7 +7,7 @@ import Button from "../Button";
 import "./01BasicDataScreenOne.scss";
 
 const BasicDataScreenOne:React.FC<ScreenProps> = (props) => {
-    return <Screen className={props.className}>
+    return <Screen className={props.className} platform={props.platform}>
         <Card className={props.className}>
             
         </Card>

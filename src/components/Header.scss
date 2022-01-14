@@ -23,3 +23,8 @@
 .header {
     @include headerTemplate;
 }
+
+.header-darwin {
+    @include headerTemplate;
+    justify-content: center;
+}

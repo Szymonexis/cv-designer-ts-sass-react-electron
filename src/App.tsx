@@ -11,10 +11,10 @@ function App() {
 		<Router>
 			<Switch>
 				<Route exact path={"/"}>
-					<WelcomeScreen />
+					<WelcomeScreen platform={"win32"} />
 				</Route>
 				<Route exact path={"/basicDataOne"}>
-					<BasicDataScreen />
+					<BasicDataScreen platform="win32" />
 				</Route>
 				<Redirect to={"/"} />
 			</Switch>

@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path")
 
-const express = require('express');
+const expressMain = require('express');
 const bodyParser = require('body-parser');
 
-const app = express();
+var app = expressMain();
 
-// const routes = require("./routes");
+const platformRoutes = require('./routes/platformRoutes');
 
 app.use(bodyParser.json());
 
@@ -21,8 +21,8 @@ app.use((req: any, res: any, next: any) => {
     next();
 });
 
-// app.use('/api/podcasts', podcastsRoutes);
-// app.use('/api/users', usersRoutes);
+app.use('/api/platform', platformRoutes);
+// app.use('/api/data', data);
 // app.use('/', routes);
 
 app.use((error: any, req: any, res: any, next: any) => {

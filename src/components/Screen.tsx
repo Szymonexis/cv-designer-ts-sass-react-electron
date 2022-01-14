@@ -6,12 +6,13 @@ import "./Screen.scss";
 export interface ScreenProps {
 	className?: string;
 	data?: Object;
+	platform: string;
 }
 
 const Screen: React.FC<ScreenProps> = (props) => {
 	return (
 		<React.Fragment>
-			<Header />
+			<Header platform={props.platform}/>
 			<div
 				className={
 					props.className !== undefined
